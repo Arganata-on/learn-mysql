@@ -179,3 +179,59 @@ CREATE TABLE transaction_detail (
     FOREIGN KEY (transaction_id) REFERENCES transaction (transaction_id),
     FOREIGN KEY (product_id) REFERENCES product (product_id)
 );
+
+INSERT INTO
+    user (
+        username,
+        password,
+        nama,
+        role,
+        email,
+        last_login,
+        is_active
+    )
+VALUES (
+        'Woz',
+        'woz123',
+        'Arganata',
+        'Admin',
+        'arganata@gmail.com',
+        CURRENT_TIMESTAMP,
+        1
+    ),
+    (
+        'Amarai',
+        'amarai123',
+        'Fadil',
+        'Gudang',
+        'amarai@gmail.com',
+        CURRENT_TIMESTAMP,
+        1
+    ),
+    (
+        'Ked',
+        'ked123',
+        'Eko',
+        'Manajer',
+        'ked@gmail.com',
+        CURRENT_TIMESTAMP,
+        1
+    ),
+    (
+        'Aestra',
+        'aestra123',
+        'Abbad',
+        'Customer Service',
+        'aestra@gmail.com',
+        CURRENT_TIMESTAMP,
+        1
+    ),
+    (
+        'Mas San',
+        'firman123',
+        'Firman',
+        'Kasir',
+        'massan@gmail.com',
+        CURRENT_TIMESTAMP,
+        1
+    );
