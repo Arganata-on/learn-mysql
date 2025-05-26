@@ -1,4 +1,4 @@
--- Active: 1748068829425@@127.0.0.1@3306@phpmyadmin
+-- Active: 1748068829425@@127.0.0.1@3306@manajemen_toko
 CREATE DATABASE manajemen_toko;
 
 USE manajemen_toko;
@@ -1023,3 +1023,16 @@ FROM
     INNER JOIN purchase_detail ON purchase.purchase_id = purchase_detail.purchase_id
     INNER JOIN inventory_detail ON purchase_detail.product_id = inventory_detail.product_id
     INNER JOIN inventory ON inventory_detail.inventory_id = inventory.inventory_id;
+
+-- Update
+
+UPDATE users SET nama = 'Firmansyah' WHERE user_id = 4;
+
+-- Delete
+SET GLOBAL FOREIGN_KEY_CHECKS = 0;
+
+DELETE FROM users WHERE username = 'Aestra';
+
+-- Select
+
+SELECT * FROM users;
